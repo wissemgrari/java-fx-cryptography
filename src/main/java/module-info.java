@@ -1,10 +1,11 @@
-module com.wissem.cryptography {
-    requires javafx.controls;
-    requires javafx.fxml;
-
-    requires org.kordamp.ikonli.javafx;
-    requires org.kordamp.bootstrapfx.core;
-
-    opens com.wissem.cryptography to javafx.fxml;
-    exports com.wissem.cryptography;
+module com.wissem {
+  requires javafx.controls;
+  requires javafx.fxml;
+  
+  opens com.wissem to javafx.fxml;
+  exports com.wissem;
+  exports com.wissem.algorithm;
+  opens com.wissem.algorithm to javafx.fxml;
+  exports com.wissem.text;
+  opens com.wissem.text to javafx.fxml;
 }
