@@ -18,7 +18,7 @@ public class Main extends Application {
   @Override
   public void start(Stage stage) throws IOException {
     // Load the MainScene
-    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("TextCryptoScene.fxml"));
+    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MainScene.fxml"));
     Scene scene = new Scene(fxmlLoader.load());
     
     // add css stylesheet

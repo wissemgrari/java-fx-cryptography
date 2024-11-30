@@ -1,9 +1,16 @@
 package com.wissem.text;
 
-import com.wissem.algorithm.AES;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class TextController {
   
@@ -12,7 +19,7 @@ public class TextController {
   
   public void encryptText() {
     try {
-      String encryptedText = AES.encrypt(encText.getText(), encSecretKey.getText());
+      String encryptedText = TextEncryption.encrypt(encText.getText(), encSecretKey.getText());
       encRes.setText(encryptedText);
     }
     catch (Exception e) {
@@ -22,12 +29,20 @@ public class TextController {
   
   public void decryptText() {
     try {
-      String decryptedText = AES.decrypt(decText.getText(), decSecretKey.getText());
+      String decryptedText = TextEncryption.decrypt(decText.getText(), decSecretKey.getText());
       decRes.setText(decryptedText);
     }
     catch (Exception e) {
       decRes.setText("Decryption failed: " + e.getMessage());
     }
+  }
+  
+  public void goHome(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/com/wissem/MainScene.fxml"));
+    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    Scene scene = new Scene(root);
+    stage.setScene(scene);
+    stage.show();
   }
   
 }

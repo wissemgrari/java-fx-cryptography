@@ -1,10 +1,10 @@
-package com.wissem.algorithm;
+package com.wissem.text;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.Base64;
 
-public class AES {
+public class TextEncryption {
   
   // Method to encrypt a plaintext using AES
   public static String encrypt(String plainText, String secretKey) throws Exception {

@@ -5,14 +5,21 @@
 .button {
     -fx-background-color: #FFF;
     -fx-text-fill: #000;
-    -fx-font-size: 14px;
-    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-padding: 5px;
     -fx-border-radius: 20px;
+    -fx-background-radius: 0
+}
+
+.text-field {
+    -fx-background-radius: 0;
+    -fx-padding: 5px;
 }
 
 .text-area {
     -fx-background-insets: 0;
     -fx-background-color: transparent, white, transparent, white;
+    -fx-background-radius: 0
 }
 
 .text-area .content {
