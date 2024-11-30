@@ -12,8 +12,8 @@ Maven.
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/wissemgrari/Cryptography.git
-   cd Cryptography
+   git clone https://github.com/wissemgrari/java-fx-cryptography.git
+   cd java-fx-cryptography
    ```
 2. **Build the project:**
    ```sh
