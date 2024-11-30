@@ -1,7 +1,7 @@
 ## Overview
 
-Cryptography is a Java-based project that utilizes JavaFX for the graphical user interface. The project is built using
-Maven.
+Cryptography is a Java-based project that utilizes JavaFX for the graphical user interface. The application provides
+text and file cryptography using the AES (Advanced Encryption Standard) algorithm.
 
 ## Prerequisites
 
