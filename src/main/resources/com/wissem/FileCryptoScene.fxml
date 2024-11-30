@@ -80,7 +80,7 @@
                         <Font name="System Bold" size="11.0" />
                     </font>
                 </Label>
-                <Label fx:id="encOutput" layoutX="65.0" layoutY="42.0" textFill="#cccccc">
+                <Label fx:id="encOutput" layoutX="65.0" layoutY="42.0" prefHeight="16.0" prefWidth="219.0" textFill="#cccccc" wrapText="true">
                     <font>
                         <Font name="System Italic" size="11.0" />
                     </font>
@@ -127,7 +127,7 @@
                         <Font name="System Bold" size="11.0" />
                     </font>
                 </Label>
-                <Label fx:id="decOutput" layoutX="65.0" layoutY="42.0" textFill="#cccccc">
+                <Label fx:id="decOutput" layoutX="65.0" layoutY="42.0" prefHeight="16.0" prefWidth="219.0" textFill="#cccccc" wrapText="true">
                     <font>
                         <Font name="System Italic" size="11.0" />
                     </font>
