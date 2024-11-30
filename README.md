@@ -40,7 +40,6 @@ text and file cryptography using the AES (Advanced Encryption Standard) algorith
 
 * JavaFX Controls
 * JavaFX FXML
-* JUnit 5
 
 ### Configuration
 
