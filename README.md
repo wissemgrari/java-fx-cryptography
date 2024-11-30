@@ -3,6 +3,12 @@
 Cryptography is a Java-based project that utilizes JavaFX for the graphical user interface. The application provides
 text and file cryptography using the AES (Advanced Encryption Standard) algorithm.
 
+<div style="display: flex; gap: 5px; flex-wrap: wrap;">
+  <img src="screenshots/main.png" alt="Screenshot 1" style="width: 33%;">
+  <img src="screenshots/text.png" alt="Screenshot 2" style="width: 33%;">
+  <img src="screenshots/file.png" alt="Screenshot 3" style="width: 33%;">
+</div>
+
 ## Prerequisites
 
 - JDK 21 or later
