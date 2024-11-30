@@ -23,11 +23,11 @@ text and file cryptography using the AES (Advanced Encryption Standard) algorith
    ```
 2. **Build the project:**
    ```sh
-   mvn clean install
+   ./mvnw clean install
    ```
 3. **Run the application:**
    ```sh
-   mvn javafx:run
+   ./mvnw javafx:run
    ```
 
 ### Project Structure
