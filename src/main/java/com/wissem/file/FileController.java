@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class FileController {
   
@@ -72,7 +73,7 @@ public class FileController {
   }
   
   public void goHome(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/com/wissem/MainScene.fxml"));
+    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/wissem/MainScene.fxml")));
     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     Scene scene = new Scene(root);
     stage.setScene(scene);

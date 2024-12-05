@@ -22,7 +22,7 @@ public class Main extends Application {
     Scene scene = new Scene(fxmlLoader.load());
     
     // add css stylesheet
-    String css = this.getClass().getResource("/styles.css").toExternalForm();
+    String css = Objects.requireNonNull(this.getClass().getResource("/styles.css")).toExternalForm();
     scene.getStylesheets().add(css);
     
     // set the application icon

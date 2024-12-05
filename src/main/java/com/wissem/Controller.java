@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class Controller {
   private Stage stage;
@@ -16,7 +17,7 @@ public class Controller {
   
   
   public void switchToTextCryptoScene(ActionEvent event) throws IOException {
-    root = FXMLLoader.load(getClass().getResource("TextCryptoScene.fxml"));
+    root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TextCryptoScene.fxml")));
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
     stage.setScene(scene);
@@ -24,7 +25,7 @@ public class Controller {
   }
   
   public void switchToFileCryptoScene(ActionEvent event) throws IOException {
-    root = FXMLLoader.load(getClass().getResource("FileCryptoScene.fxml"));
+    root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FileCryptoScene.fxml")));
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
     stage.setScene(scene);

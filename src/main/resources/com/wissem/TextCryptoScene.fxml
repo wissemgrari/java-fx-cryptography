@@ -12,100 +12,98 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0"
             prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.wissem.text.TextController">
-    <children>
-        <ImageView fitHeight="462.0" fitWidth="728.0" layoutX="-5.0" layoutY="-1.0" pickOnBounds="true">
-            <image>
-                <Image url="@../../images/background.jpg"/>
-            </image>
-            <effect>
-                <ColorAdjust brightness="-0.68" contrast="-0.13"/>
-            </effect>
-        </ImageView>
-        <Pane layoutX="31.0" layoutY="23.0" prefHeight="35.0" prefWidth="92.0" style="-fx-border-color: #ccc; -fx-border-radius: 5;">
-            <children>
-                <SVGPath content="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z" fill="#f8f8f8" layoutX="6.0" layoutY="4.0" scaleX="0.7" scaleY="0.7" />
-                <Button layoutX="23.0" layoutY="4.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: transparent;" text="HOME" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="13.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
-                </Button>
-            </children>
-        </Pane>
-        <Label layoutX="267.0" layoutY="24.0" text="Text Cryptography" textFill="#cccccc">
+    <ImageView fitHeight="462.0" fitWidth="728.0" layoutX="-5.0" layoutY="-1.0" pickOnBounds="true">
+        <effect>
+            <ColorAdjust brightness="-0.68" contrast="-0.13"/>
+        </effect>
+        <Image url="@../../images/background.jpg"/>
+    </ImageView>
+    <Pane layoutX="31.0" layoutY="23.0" prefHeight="35.0" prefWidth="92.0"
+          style="-fx-border-color: #ccc; -fx-border-radius: 5;">
+        <SVGPath
+            content="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z"
+            fill="#f8f8f8" layoutX="6.0" layoutY="4.0" scaleX="0.7" scaleY="0.7"/>
+        <Button layoutX="23.0" layoutY="4.0" mnemonicParsing="false" onAction="#goHome"
+                style="-fx-background-color: transparent;" text="HOME" textFill="WHITE">
             <font>
-                <Font name="Lucida Console" size="18.0"/>
-            </font>
-        </Label>
-        <TextArea fx:id="encText" focusTraversable="false" layoutX="34.0" layoutY="109.0" prefHeight="82.0"
-                  prefWidth="282.0" promptText="Enter text to be Encrypted" style="-fx-padding: 5;" wrapText="true">
-            <font>
-                <Font name="Lucida Console" size="13.0"/>
-            </font>
-            <cursor>
-                <Cursor fx:constant="TEXT"/>
-            </cursor>
-        </TextArea>
-        <TextField fx:id="encSecretKey" focusTraversable="false" layoutX="34.0" layoutY="203.0" prefHeight="34.0"
-                   prefWidth="282.0" promptText="Enter secret key" style="-fx-padding: 10;">
-            <font>
-                <Font name="Lucida Console" size="13.0"/>
-            </font>
-        </TextField>
-        <Button fx:id="encBtn" layoutX="34.0" layoutY="248.0" mnemonicParsing="false" onAction="#encryptText"
-                prefHeight="34.0" prefWidth="282.0" text="Encrypt" textAlignment="CENTER">
-            <font>
-                <Font name="Lucida Console" size="12.0"/>
+                <Font name="System Bold" size="13.0"/>
             </font>
             <cursor>
                 <Cursor fx:constant="HAND"/>
             </cursor>
         </Button>
-        <TextArea fx:id="encRes" focusTraversable="false" layoutX="34.0" layoutY="322.0" prefHeight="82.0"
-                  prefWidth="282.0" promptText="Result goes here" style="-fx-padding: 5;" wrapText="true">
-            <font>
-                <Font name="Lucida Console" size="13.0"/>
-            </font>
-            <cursor>
-                <Cursor fx:constant="TEXT"/>
-            </cursor>
-        </TextArea>
-        <Separator layoutX="353.0" layoutY="86.0" opacity="0.2" orientation="VERTICAL" prefHeight="351.0"
-                   prefWidth="13.0"/>
-        <TextArea fx:id="decText" focusTraversable="false" layoutX="402.0" layoutY="109.0" prefHeight="82.0"
-                  prefWidth="282.0" promptText="Enter text to be Decrypted" style="-fx-padding: 5;" wrapText="true">
-            <font>
-                <Font name="Lucida Console" size="13.0"/>
-            </font>
-            <cursor>
-                <Cursor fx:constant="TEXT"/>
-            </cursor>
-        </TextArea>
-        <TextField fx:id="decSecretKey" focusTraversable="false" layoutX="402.0" layoutY="203.0" prefHeight="34.0"
-                   prefWidth="282.0" promptText="Enter secret key" style="-fx-padding: 10;">
-            <font>
-                <Font name="Lucida Console" size="13.0"/>
-            </font>
-        </TextField>
-        <Button fx:id="decBtn" layoutX="402.0" layoutY="248.0" mnemonicParsing="false" onAction="#decryptText"
-                prefHeight="34.0" prefWidth="282.0" text="Decrypt" textAlignment="CENTER">
-            <font>
-                <Font name="Lucida Console" size="12.0"/>
-            </font>
-            <cursor>
-                <Cursor fx:constant="HAND"/>
-            </cursor>
-        </Button>
-        <TextArea fx:id="decRes" focusTraversable="false" layoutX="402.0" layoutY="322.0" prefHeight="82.0"
-                  prefWidth="282.0" promptText="Result goes here" style="-fx-padding: 5;" wrapText="true">
-            <font>
-                <Font name="Lucida Console" size="13.0"/>
-            </font>
-            <cursor>
-                <Cursor fx:constant="TEXT"/>
-            </cursor>
-        </TextArea>
-    </children>
+    </Pane>
+    <Label layoutX="267.0" layoutY="24.0" text="Text Cryptography" textFill="#cccccc">
+        <font>
+            <Font name="Lucida Console" size="18.0"/>
+        </font>
+    </Label>
+    <TextArea fx:id="encText" focusTraversable="false" layoutX="34.0" layoutY="109.0" prefHeight="82.0"
+              prefWidth="282.0" promptText="Enter text to be Encrypted" style="-fx-padding: 5;" wrapText="true">
+        <font>
+            <Font name="Lucida Console" size="13.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="TEXT"/>
+        </cursor>
+    </TextArea>
+    <TextField fx:id="encSecretKey" focusTraversable="false" layoutX="34.0" layoutY="203.0" prefHeight="34.0"
+               prefWidth="282.0" promptText="Enter secret key" style="-fx-padding: 10;">
+        <font>
+            <Font name="Lucida Console" size="13.0"/>
+        </font>
+    </TextField>
+    <Button fx:id="encBtn" layoutX="34.0" layoutY="248.0" mnemonicParsing="false" onAction="#encryptText"
+            prefHeight="34.0" prefWidth="282.0" text="Encrypt" textAlignment="CENTER">
+        <font>
+            <Font name="Lucida Console" size="12.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <TextArea fx:id="encRes" focusTraversable="false" layoutX="34.0" layoutY="322.0" prefHeight="82.0"
+              prefWidth="282.0" promptText="Result goes here" style="-fx-padding: 5;" wrapText="true">
+        <font>
+            <Font name="Lucida Console" size="13.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="TEXT"/>
+        </cursor>
+    </TextArea>
+    <Separator layoutX="353.0" layoutY="86.0" opacity="0.2" orientation="VERTICAL" prefHeight="351.0"
+               prefWidth="13.0"/>
+    <TextArea fx:id="decText" focusTraversable="false" layoutX="402.0" layoutY="109.0" prefHeight="82.0"
+              prefWidth="282.0" promptText="Enter text to be Decrypted" style="-fx-padding: 5;" wrapText="true">
+        <font>
+            <Font name="Lucida Console" size="13.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="TEXT"/>
+        </cursor>
+    </TextArea>
+    <TextField fx:id="decSecretKey" focusTraversable="false" layoutX="402.0" layoutY="203.0" prefHeight="34.0"
+               prefWidth="282.0" promptText="Enter secret key" style="-fx-padding: 10;">
+        <font>
+            <Font name="Lucida Console" size="13.0"/>
+        </font>
+    </TextField>
+    <Button fx:id="decBtn" layoutX="402.0" layoutY="248.0" mnemonicParsing="false" onAction="#decryptText"
+            prefHeight="34.0" prefWidth="282.0" text="Decrypt" textAlignment="CENTER">
+        <font>
+            <Font name="Lucida Console" size="12.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <TextArea fx:id="decRes" focusTraversable="false" layoutX="402.0" layoutY="322.0" prefHeight="82.0"
+              prefWidth="282.0" promptText="Result goes here" style="-fx-padding: 5;" wrapText="true">
+        <font>
+            <Font name="Lucida Console" size="13.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="TEXT"/>
+        </cursor>
+    </TextArea>
 </AnchorPane>
