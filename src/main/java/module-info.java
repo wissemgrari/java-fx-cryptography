@@ -1,6 +1,7 @@
 module com.wissem {
   requires javafx.controls;
   requires javafx.fxml;
+  requires java.sql;
   
   opens com.wissem to javafx.fxml;
   exports com.wissem;
